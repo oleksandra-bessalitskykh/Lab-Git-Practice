@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Practice Kolesnik/Stepanova</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #070707;
+      transition: 0.5s all;
+    }
+    .header {
+      font-size: 48px;
+    }
+    .btns {
+      display: flex;
+      width: 300px;
+      justify-content: space-evenly;
+    }
+    .sergey-background {
+      background-color: #6bc8ec;
+    }
+    .tanya-background {
+      /*set here your background color*/
+    }
+  </style>
+</head>
+<body>
+  <h1 class="header">Who are you?</h1>
+  <div class="btns">
+    <button class="btn btn-secondary sergey">Sergey</button>
+    <button class="btn btn-secondary tanya">Tanya</button>
+    <script>
+      const body = document.querySelector("body");
+      const header = document.querySelector(".header");
+      const sergeyBtn = document.querySelector(".sergey");
+      const tanyaBtn = document.querySelector(".tanya");
+
+      sergeyBtn.addEventListener("click", () => {
+        if (body.classList.contains("tanya-background")) {
+          body.classList.remove("tanya-background")
+        }
+        body.classList.add("sergey-background");
+        header.innerHTML = "Sergey"
+      });
+
+      tanyaBtn.addEventListener("click", () => {
+        if (body.classList.contains("sergey-background")) {
+          body.classList.remove("sergey-background")
+        }
+        body.classList.add("tanya-background");
+        header.innerHTML = "Tanya"
+      });
+    </script>
+</body>
+</html>
