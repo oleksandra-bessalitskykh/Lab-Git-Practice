@@ -60,6 +60,15 @@
         body.classList.add("tanya-background");
         header.innerHTML = "Tanya"
       });
+
+      tanyaBtn.addEventListener("click", () => {
+        if (body.classList.contains("sergey-background")) {
+          body.classList.remove("sergey-background")
+        }
+        body.classList.add("tanya-background");
+        header.innerHTML = "Tanya"
+      });
+
     </script>
 </body>
 </html>
